@@ -6,7 +6,6 @@ import App from "./App";
 import { store } from "./store";
 import reportWebVitals from "./reportWebVitals";
 
-import "katex/dist/katex.min.css";
 import "./index.css";
 
 ReactDOM.render(
