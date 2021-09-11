@@ -1,2 +1,2 @@
-export { default as Editor } from "./Editor";
+export { default as Content } from "./Content";
 export { default as Title } from "./Title";
