@@ -1,15 +1,16 @@
 import React from "react";
 import { makeStyles } from "@material-ui/core/styles";
+import { Box } from "@material-ui/core";
 
 import { Editor } from "./editor";
 import { Preview } from "./preview";
-import VerticalBreak from "./ui/components/VerticalBreak";
 
 const useStyles = makeStyles({
   root: {
     display: "flex",
     flexDirection: "row",
-    justifyContent: "center",
+    justifyContent: "space-evenly",
+    padding: "30px 50px",
   },
 });
 
@@ -17,11 +18,10 @@ function App() {
   const styles = useStyles();
 
   return (
-    <div className={styles.root}>
+    <Box className={styles.root}>
       <Editor />
-      <VerticalBreak />
       <Preview />
-    </div>
+    </Box>
   );
 }
 

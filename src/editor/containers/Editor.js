@@ -1,6 +1,7 @@
 import React from "react";
 import { useDispatch } from "react-redux";
 import { makeStyles } from "@material-ui/core/styles";
+import { Box } from "@material-ui/core";
 
 import { Content, Title } from "../components";
 import { onTitleChange, onContentChange } from "../stores";
@@ -10,6 +11,7 @@ const useStyles = makeStyles({
   root: {
     display: "flex",
     flexDirection: "column",
+    padding: "0px 20px",
   },
 });
 
@@ -20,7 +22,7 @@ export default function Editor() {
   const styles = useStyles();
 
   return (
-    <div className={styles.root}>
+    <Box border={1} className={styles.root} width={700}>
       <Title
         title={title}
         onChange={(e) => dispatch(onTitleChange(e.target.value))}
@@ -29,6 +31,6 @@ export default function Editor() {
         content={content}
         onChange={(e) => dispatch(onContentChange(e.target.value))}
       />
-    </div>
+    </Box>
   );
 }

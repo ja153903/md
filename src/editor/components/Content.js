@@ -10,6 +10,7 @@ export default function Content({ content, onChange }) {
       multiline
       fullWidth
       rows={40}
+      InputProps={{ disableUnderline: true }}
     />
   );
 }
