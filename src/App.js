@@ -3,6 +3,7 @@ import { makeStyles } from "@material-ui/core/styles";
 
 import { Editor } from "./editor";
 import { Preview } from "./preview";
+import VerticalBreak from "./ui/components/VerticalBreak";
 
 const useStyles = makeStyles({
   root: {
@@ -18,6 +19,7 @@ function App() {
   return (
     <div className={styles.root}>
       <Editor />
+      <VerticalBreak />
       <Preview />
     </div>
   );
